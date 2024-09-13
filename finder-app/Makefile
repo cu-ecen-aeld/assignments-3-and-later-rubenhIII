@@ -2,7 +2,7 @@ SOURCES = writer.c
 OBJS = $(SOURCES:.c=.o)
 TARGET = writer
 
-CROSS_COMPILE = #Cross-Compile Toolchain 
+CROSS_COMPILE = aarch64-none-linux-gnu-#Cross-Compile Toolchain 
 CC = gcc
 OPTS = -Wall # flags
 LIBS = #-lm # libraries
