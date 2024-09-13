@@ -7,6 +7,7 @@ CC = gcc
 OPTS = -Wall # flags
 LIBS = #-lm # libraries
 
+all: $(TARGET)
 $(TARGET): $(OBJS)
 	$(CROSS_COMPILE)$(CC) -o $(TARGET) $(OBJS) $(LIBS)
 
