@@ -53,13 +53,13 @@ fi
 #make clean
 #make
 
-#for i in $( seq 1 $NUMFILES)
-#do
+for i in $( seq 1 $NUMFILES)
+do
 #	make clean
 #	#make
-/bin/writer "$WRITEDIR/assignment-4-result.txt" "$WRITESTR"
+	/bin/writer "$WRITEDIR/assignment-4-result.txt" "$WRITESTR"
 	#./writer "$WRITEDIR/${username}$i.txt" "$WRITESTR"
-#done
+done
 
 OUTPUTSTRING=$(/bin/finder.sh "$WRITEDIR" "$WRITESTR")
 
