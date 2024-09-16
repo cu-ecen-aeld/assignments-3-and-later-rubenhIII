@@ -7,7 +7,7 @@ set -u
 
 NUMFILES=1
 WRITESTR=AELD_IS_FUN
-WRITEDIR=/tmp/
+WRITEDIR=/tmp
 username=$(cat /etc/finder-app/conf/username.txt)
 
 if [ $# -lt 3 ]
@@ -29,7 +29,7 @@ MATCHSTR="The number of files are ${NUMFILES} and the number of matching lines a
 
 echo "Writing ${NUMFILES} files containing string ${WRITESTR} to ${WRITEDIR}"
 
-#rm -rf "${WRITEDIR}"
+rm "${WRITEDIR}/assignment-4-result.txt"
 
 # create $WRITEDIR if not assignment1
 #assignment=`cat conf/assignment.txt`
