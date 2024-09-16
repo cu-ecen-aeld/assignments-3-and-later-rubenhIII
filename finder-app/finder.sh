@@ -7,7 +7,7 @@ then
 
 	if [ -e ${filesdir} ]
 	then
-		filesnumber=$(find ${filesdir} -mindepth 1 | wc -l)
+		filesnumber=$(find ${filesdir} -mindepth 1 | grep assignment* | wc -l)
 		#filematches=$(find ${filesdir} -mindepth 1 | awk -v var="${filesdir}/.*" -v var2="${searchstr}.*" '$0 ~ var var2' | wc -l)
 		filematches=$(awk -v var="${searchstr}" -F : '$0 ~ var' "${filesdir}/assignment"* | wc -l) 
 		echo "The number of files are" ${filesnumber} "and the number of matching lines are" ${filematches}
