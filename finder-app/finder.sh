@@ -9,7 +9,7 @@ then
 	then
 		filesnumber=$(find ${filesdir} -mindepth 1 | wc -l)
 		#filematches=$(find ${filesdir} -mindepth 1 | awk -v var="${filesdir}/.*" -v var2="${searchstr}.*" '$0 ~ var var2' | wc -l)
-		filematches=$(awk -v var="${searchstr}" -F : '$0 ~ var' "${filesdir}/"* | wc -l) 
+		filematches=$(awk -v var="${searchstr}" -F : '$0 ~ var' "${filesdir}/assignment"* | wc -l) 
 		echo "The number of files are" ${filesnumber} "and the number of matching lines are" ${filematches}
 	else
 		echo "The path does not exist" 1>&2
